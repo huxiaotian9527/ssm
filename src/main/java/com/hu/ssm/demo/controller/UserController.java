@@ -5,8 +5,7 @@ import com.hu.ssm.base.ResultUtil;
 import com.hu.ssm.demo.service.UserServiceImpl;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.*;
 
@@ -19,9 +18,9 @@ import javax.annotation.Resource;
  */
 @Api(tags = "用户管理")
 @RestController
+@Slf4j
 @RequestMapping("/user")
 public class UserController {
-    private final Logger log = LoggerFactory.getLogger(UserController.class);
 
     @Resource
     private UserServiceImpl userService;
@@ -34,7 +33,7 @@ public class UserController {
         try{
             result = userService.findUser(id);
         }catch(Exception e){
-            result = ResultUtil.businessError("程序异常！");
+            result = ResultUtil.serverError();
             log.error("查询用户失败！",e);
         }
         return result;
