@@ -9,14 +9,12 @@
                         http://www.springframework.org/schema/context
                         http://www.springframework.org/schema/context/spring-context-3.1.xsd
                         http://www.springframework.org/schema/mvc
-                        http://www.springframework.org/schema/mvc/spring-mvc-4.0.xsd
-						http://www.springframework.org/schema/aop
-        				http://www.springframework.org/schema/aop/spring-aop.xsd">
+                        http://www.springframework.org/schema/mvc/spring-mvc-4.0.xsd">
 
 	<!-- Spring MVC 扫描包路径配置 -->
-	<context:component-scan base-package="com.hu.ssm" use-default-filters="false">
+	<!--<context:component-scan base-package="com.hu.ssm" use-default-filters="false">
 		<context:include-filter type="annotation" expression="org.springframework.stereotype.Controller" />
-	</context:component-scan>
+	</context:component-scan>-->
 
 	<!-- 定义跳转的文件的前后缀 ，视图模式配置-->
 	<bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
@@ -38,7 +36,5 @@
 	<!--将springmvc"/"匹配到的静态交给Web应用服务器默认的Servlet处理-->
 	<mvc:default-servlet-handler />
 
-	<!--通过配置织入@Aspectj切面-->
-	<aop:aspectj-autoproxy />
 
 </beans>
