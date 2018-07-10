@@ -20,7 +20,7 @@ public class ExceptionAspect {
     /**
      * 定义切点: *Controller 且参数中有 BaseReqModel
      */
-    @Pointcut(value = "execution(* com.hu.ssm.demo..*.*(..))")
+    @Pointcut(value = "execution(* com.hu.ssm.demo.controller.*.*(..))")
     public void point() {}
 
 
@@ -30,6 +30,9 @@ public class ExceptionAspect {
         log.debug("开始执行切面方法---------");
         Object result = null;
         try {
+
+
+
             result = pjp.proceed();
         } catch (Exception e) {
             log.error("待加强的方法执行异常"+pjp.getTarget().getClass().getName(),e);
