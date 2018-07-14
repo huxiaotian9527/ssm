@@ -23,11 +23,11 @@ import java.util.concurrent.TimeUnit;
 @Component
 public class RedisDistributedLockHandler {
 
-	private final static long LOCK_EXPIRE = 60000L; // 默认单个业务持有锁的时间60s,防止死锁
+	private final static long LOCK_EXPIRE = 30000L; // 默认单个业务持有锁的时间30s,防止死锁
 
-	private final static long LOCK_TRY_INTERVAL = 100L; // 默认30ms尝试一次
+	private final static long LOCK_TRY_INTERVAL = 500L; // 默认500ms尝试一次
 
-	private final static long LOCK_TRY_TIMEOUT = 10*1000L; // 默认尝试10s
+	private final static long LOCK_TRY_TIMEOUT = 5*1000L; // 默认尝试5s
 
     @Resource
     private RedisConnectionFactory redisConnectionFactory;
