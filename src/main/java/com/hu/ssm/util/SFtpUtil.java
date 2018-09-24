@@ -16,7 +16,7 @@ import java.util.Vector;
  * @since 1.0.0
  */
 @Slf4j
-@Service
+//@Service
 public class SFtpUtil {
 
     private static String host_1;
