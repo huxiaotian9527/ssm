@@ -7,6 +7,7 @@
 | redis            | 内存数据库，可用于缓存、session共享、分布式锁问题
 | logback             | 记录日志，比log4j稍好    
 | swagger             | RestFul接口文档生成工具，简化RestFul接口测试
+| kafka             | kafka，分布式消息中间件，可以用于业务解耦、错峰和流控、广播等，同时kafka可以持久化消息
 
 
 #### 该项目是我用来练手的一个ssm框架，慢慢集成热门技术用于学习
