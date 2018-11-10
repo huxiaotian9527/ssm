@@ -21,6 +21,10 @@
 	<!--通过配置织入@Aspectj切面-->
 	<aop:aspectj-autoproxy />
 
+	<import resource="classpath:kafka-consumer.xml"/>
+	<import resource="classpath:kafka-producer.xml"/>
+
+	<!--文件上传需要的bean-->
 	<bean id="multipartResolver" class="org.springframework.web.multipart.commons.CommonsMultipartResolver"/>
 
 	<!-- 引入配置文件 -->
