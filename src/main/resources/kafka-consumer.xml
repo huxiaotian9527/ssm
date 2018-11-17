@@ -18,8 +18,8 @@
                 <entry key="enable.auto.commit" value="true"/>  
                 <entry key="auto.commit.interval.ms" value="1000"/>  
                 <entry key="session.timeout.ms" value="15000"/>  
-                <entry key="key.deserializer" value="org.apache.kafka.common.serialization.IntegerDeserializer"/>  
-                <entry key="value.deserializer" value="org.apache.kafka.common.serialization.StringDeserializer"/>  
+                <entry key="key.deserializer" value="com.hu.ssm.kafka.ObjectDeserializer"/>
+                <entry key="value.deserializer" value="com.hu.ssm.kafka.ObjectDeserializer"/>
             </map>  
         </constructor-arg>  
      </bean>  
@@ -57,8 +57,8 @@
                 <entry key="enable.auto.commit" value="true"/>  
                 <entry key="auto.commit.interval.ms" value="1000"/>  
                 <entry key="session.timeout.ms" value="15000"/>  
-                <entry key="key.deserializer" value="org.apache.kafka.common.serialization.IntegerDeserializer"/>  
-                <entry key="value.deserializer" value="org.apache.kafka.common.serialization.StringDeserializer"/>  
+                <entry key="key.deserializer" value="com.hu.ssm.kafka.ObjectDeserializer"/>
+                <entry key="value.deserializer" value="com.hu.ssm.kafka.ObjectDeserializer"/>
             </map>  
         </constructor-arg>  
      </bean>  
