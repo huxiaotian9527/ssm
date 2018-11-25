@@ -21,7 +21,9 @@
 	<!--通过配置织入@Aspectj切面-->
 	<aop:aspectj-autoproxy />
 
+	<!--导入kafka消费者配置文件-->
 	<import resource="classpath:kafka-consumer.xml"/>
+	<!--导入kafka生产者配置文件-->
 	<import resource="classpath:kafka-producer.xml"/>
 
 	<!--文件上传需要的bean-->

@@ -9,7 +9,7 @@
       
      <!--<context:property-placeholder location="classpath:init.properties" />  -->
       
-     <!-- 定义producer的参数 -->  
+     <!-- 生产者producer的参数 -->
      <bean id="producerProperties" class="java.util.HashMap">  
         <constructor-arg>  
             <map>  

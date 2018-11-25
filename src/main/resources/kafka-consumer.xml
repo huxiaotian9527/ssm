@@ -9,7 +9,7 @@
       
     <!-- <context:property-placeholder location="classpath:init.properties" />  -->
   
-    <!-- 定义consumer的参数 -->  
+    <!-- 消费者consumer的参数 -->
      <bean id="consumerProperties" class="java.util.HashMap">  
         <constructor-arg>  
             <map>  

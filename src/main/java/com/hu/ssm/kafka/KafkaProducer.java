@@ -10,19 +10,21 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.RestController;
 
 import java.io.ByteArrayOutputStream;
 import java.io.ObjectOutputStream;
 
 
 /**
+ * kafka对象消息测试controller
  * @author hutiantian
  * @create 2018/11/10 14:37
  * @since 1.0.0
  */
 
 @Api(tags = "kafka producer")
-@Controller
+@RestController
 @RequestMapping("/producer")
 public class KafkaProducer {
 
@@ -31,9 +33,8 @@ public class KafkaProducer {
 	
 	@PostMapping("/send")
 	@ApiOperation(value = "kafka消息提供者", notes = "kafka消息提供者", produces = MediaType.APPLICATION_JSON_VALUE)
-	@ResponseBody
-	public String sendMessgae() throws Exception{
-		for(int i = 0 ;i<20;i++){
+	public String sendMessage(){
+		for(int i = 1 ;i<=10;i++){
 			KafkaMessage message = new KafkaMessage();
 			message.setName("miaomiao"+i);
 			message.setAge(i);
